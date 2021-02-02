@@ -1,6 +1,5 @@
 import Layout from '../components/layout'
 import Rellax from "rellax"
-import Image from "next/image"
 import { useContext, useEffect, useRef } from 'react'
 import { useInView, } from 'react-intersection-observer'
 import { CurrentTabContext } from '../hooks/contextHooks'
