@@ -3,7 +3,7 @@
     {
       "name": "Ben Addison",
       "title": "What is Cybersecurity?",
-      "main": "Former Security Analyst for FAANGs before starting the Addison Corporation in 2018. Ben Addison will give an introduction to network protection and the most common security vulneralibilities.",
+      "main": "Former Security Analyst for FAANGs. Ben Addison will give an introduction to network protection and the most common security vulneralibilities.",
       "imgSrc": "/images/speaker-1.jpg"
     },
     {
@@ -15,13 +15,13 @@
     {
       "name": "Herald Daniel",
       "title": "Software Security ",
-      "main": "Senior Security Engineer and author of 'Cryptography - Hardness Assumptions'. Herald Daniel will talk about the foundations of software security and attack that exploits common vulnerabilities.",
+      "main": "Senior Security Engineer and author of 'Cryptography - Hardness Assumptions'. Herald Daniel will talk about the foundations of software security and common attack patterns.",
       "imgSrc": "/images/speaker-3.jpg"
     },
     {
       "name": "Jen Hubley",
       "title": "Offensive Computer Security ",
-      "main": "Entrepreneur and founder of 360 Security. Jen Hubley will talk about penetration testing and exploitation of systems to assess actual system security (White hat penetration and secure system administration).",
+      "main": "Entrepreneur and founder of 360 Security. Jen Hubley will talk about penetration testing and exploitation of systems to assess actual system security (White hat penetration).",
       "imgSrc": "/images/speaker-4.jpg"
     }
   ]
