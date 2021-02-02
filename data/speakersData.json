@@ -9,7 +9,7 @@
     {
       "name": "Dawn Wright",
       "title": "Security 101",
-      "main": "Senior Security Engineer and author of 'Usable Security'. Dawn Wright will give her insights on how to design and build secure systems with a human-centric focus that respect human performance and their goals within a system.",
+      "main": "Senior Security Engineer and author of 'Usable Security'. Dawn Wright will give her insights on how to design and build secure systems with a human-centric focus that respect human performance.",
       "imgSrc": "/images/speaker-2.jpg"
     },
     {
@@ -21,7 +21,7 @@
     {
       "name": "Jen Hubley",
       "title": "Offensive Computer Security ",
-      "main": "Entrepreneur and founder of 360 Security. Jen Hubley will talk about penetration testing and exploitation of systems to assess actual system security (White hat penetration).",
+      "main": "Entrepreneur and founder of 360 Security. Jen Hubley will talk about penetration testing and exploitation of systems to assess actual system security.",
       "imgSrc": "/images/speaker-4.jpg"
     }
   ]

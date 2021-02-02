@@ -30,9 +30,6 @@ const Header = () => {
       <meta name="twitter:title" content={WEBSITE_TITLE} />
       <meta name="twitter:description" content={WEBSITE_DESCRIPTION} />
       <meta name="twitter:image" content={TWITTER_CARD_SRC} />
-      <link rel="preload" href="/fonts/OpenSans-Regular.ttf" as="font" type="font/truetype" crossorigin />
-      <link rel="preload" href="/fonts/PlayfairDisplay-Bold.ttf" as="font" type="font/truetype" crossorigin />
-      <link rel="preload" href="/fonts/PlayfairDisplay-Regular.ttf" as="font" type="font/truetype" crossorigin />
     </Head>
   )
 }

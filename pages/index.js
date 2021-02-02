@@ -1,5 +1,4 @@
 import Layout from '../components/layout'
-// import Rellax from "rellax"
 import { useContext, useEffect, useRef } from 'react'
 import { useInView, } from 'react-intersection-observer'
 import { CurrentTabContext } from '../hooks/contextHooks'
@@ -13,16 +12,9 @@ const speakersData = require("../data/speakersData.json")
 const scheduleData = require("../data/scheduleData.json")
 
 export default function Home() {
-  const rellaxHeroRef = useRef(null)
   const topSubConfirmRef = useRef(null)
   const btmSubConfirmRef = useRef(null)
   const { setCurrentTabIndex, } = useContext(CurrentTabContext)
-
-  useEffect(() => {
-    // new Rellax(rellaxHeroRef.current, {
-    //   speed: -10,
-    // })
-  }, [])
 
   const { ref: homeRef, inView: homeInView, } = useInView({
     threshold: 0.5,
@@ -66,33 +58,37 @@ export default function Home() {
     <Layout>
       <div className="w-full grid grid-cols-1 font-play">
         <div ref={homeRef} id="home" className="relative w-full text-gray-50">
-          <div ref={rellaxHeroRef} className="absolute inset-0 w-full h-full bg-cover bg-no-repeat bg-center" style={{ zIndex: -100, backgroundImage: "url(/images/bg-hero.jpg)", filter: "brightness(75%) contrast(125%)" }}></div>
-          <div className="pl-2 pr-2 sm:pl-24 md:pl-36 mt-64 w-full sm:mt-72 max-w-xs mx-auto sm:max-w-none md:mx-0 md:mt-96 pt-0 sm:pt-16 md:pt-24 relative z-10">
-            <h1 className=" tracking-wide leading-tight capitalize text-4xl sm:text-6xl md:text-7xl">
-              cybersecurity <br /> conference 2021
+          <div className="absolute inset-0 w-full h-full bg-cover bg-no-repeat bg-center" style={{ zIndex: -100, backgroundImage: "url(/images/bg-hero.jpg)", filter: "brightness(75%) contrast(125%)" }}></div>
+          <div className="max-w-screen-lg mx-auto">
+            <div className="pl-2 pr-2 sm:pl-24 md:pl-36 mt-64 w-full sm:mt-72 max-w-xs mx-auto sm:max-w-none md:mx-0 md:mt-96 pt-0 sm:pt-16 md:pt-24 relative z-10">
+              <h1 className=" tracking-wide leading-tight capitalize text-4xl sm:text-6xl md:text-7xl">
+                cybersecurity <br /> conference 2021
             </h1>
-            <div className="flex flex-col">
-              <div className="mt-4 flex items-center">
-                <div className="w-16 md:w-28 h-0.5 bg-white"></div>
-                <p className="text-base sm:text-lg md:text-xl tracking-wide ml-4">Live event, February 14th</p>
-              </div>
-              <form onSubmit={handleRegister} className="md:pl-8 flex flex-col mt-8 mb-28">
-                <div className="flex max-w-xs">
-                  <label htmlFor="topRegisterEmailId" className="sr-only">enter your email address to join for free</label>
-                  <input required={true} className="flex-shrink w-48 py-2 px-4 text-gray-900 flex-1 bg-orange-50 hover:bg-white focus:bg-white focus:outline-none" type="email" name="registerEmail" id="topRegisterEmailId" />
-                  <button className="flex-shrink-0 px-4 py-2 bg-orange-600 transition-colors duration-150 font-open text-gray-50 focus:outline-none">
-                    Register
-              </button>
+              <div className="flex flex-col">
+                <div className="mt-4 flex items-center">
+                  <div className="w-16 md:w-28 h-0.5 bg-white"></div>
+                  <p className="text-xl sm:text-2xl md:text-3xl tracking-wide ml-4">Live event, February 14th</p>
                 </div>
-                <p ref={topSubConfirmRef} className="ml-12 sm:ml-40 md:ml-56 mt-4 text-white select-none opacity-0">Thanks for subscribing!</p>
-              </form>
+                <form onSubmit={handleRegister} className="md:pl-8 flex flex-col mt-8 mb-28">
+                  <div className="flex max-w-xs">
+                    <label htmlFor="topRegisterEmailId" className="sr-only">enter your email address to join for free</label>
+                    <input required={true} className="flex-shrink w-48 py-2 px-4 text-gray-900 flex-1 bg-orange-50 hover:bg-white focus:bg-white focus:outline-none" type="email" name="registerEmail" id="topRegisterEmailId" />
+                    <button className="flex-shrink-0 px-4 py-2 bg-orange-600 transition-colors duration-150 font-sans text-gray-50 focus:outline-none">
+                      Register
+              </button>
+                  </div>
+                  <p ref={topSubConfirmRef} className="ml-12 sm:ml-40 md:ml-56 mt-4 text-white select-none opacity-0">Thanks for subscribing!</p>
+                </form>
+              </div>
             </div>
           </div>
         </div>
         <div ref={speakersRef} id="speakers" className="w-full bg-gray-200 ">
-          <h1 className="mt-16 pl-8 pr-2 sm:pl-24 md:pl-36 tracking-wide capitalize  text-3xl sm:text-4xl md:text-5xl text-orange-800">
-            our speakers
+          <div className="max-w-screen-lg mx-auto">
+            <h1 className="mt-16 pl-8 pr-2 sm:pl-24 md:pl-36 tracking-wide capitalize text-4xl sm:text-5xl md:text-6xl text-orange-800">
+              our speakers
             </h1>
+          </div>
           <div className="md:mt-28 flex flex-col md:bg-gray-50 max-w-screen-lg mx-auto py-16 md:py-32 space-y-4 sm:space-y-12 md:space-y-32">
             {
               speakersData.speakers.map((s, index) => <Speaker speakerData={s} index={index} key={index} />)
@@ -100,9 +96,11 @@ export default function Home() {
           </div>
         </div>
         <div ref={scheduleRef} id="schedule" className="w-full bg-gray-900 ">
-          <h1 className="mt-16 pl-8 pr-2 sm:pl-24 md:pl-36 md:mt-24 tracking-wide capitalize text-3xl sm:text-4xl md:text-5xl text-white">
-            Schedule
+          <div className="max-w-screen-lg mx-auto">
+            <h1 className="mt-16 pl-8 pr-2 sm:pl-24 md:pl-36 md:mt-24 tracking-wide capitalize text-4xl sm:text-5xl md:text-6xl text-white">
+              Schedule
           </h1>
+          </div>
           <div className="mt-12 md:mt-24 max-w-screen-md mx-auto flex flex-col items-center">
             <div className="flex flex-col pb-20">
               {
@@ -112,25 +110,26 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div ref={contactRef} id="contact" className=" w-full bg-orange-600 text-black">
-          <h1 className="mt-16 pl-8 pr-2 sm:pl-24 md:pl-36 md:mt-24 pb-8 md:pb-16 tracking-wide capitalize text-3xl sm:text-4xl md:text-5xl text-white border-b border-orange-200">
-            Cybersecurity <br /> Conference 2021
+        <div ref={contactRef} id="contact" className=" w-full bg-orange-600 text-white">
+          <div className="max-w-screen-lg mx-auto">
+            <h1 className="mt-16 pl-8 pr-2 sm:pl-24 md:pl-36 md:mt-24 tracking-wide capitalize text-4xl sm:text-5xl md:text-6xl pb-16 text-white border-b border-orange-200">
+              Cybersecurity <br /> Conference 2021
           </h1>
-          <div className="pl-2 pr-2 m-16 max-w-xs mx-auto sm:max-w-none md:mx-0 md:max-w-screen-lg">
-            <p className=" sm:pl-24 md:pl-36 mt-8 text-lg sm:text-xl md:text-2xl font-bold">Get your ticket now!</p>
-            <form onSubmit={handleRegister2} className=" sm:pl-24 md:pl-36 flex flex-col mt-6">
-              <div className="flex w-full max-w-xs">
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 mt-6 sm:mt-8 md:mt-16 mb-20 gap-y-8 mx-auto pl-4 pr-8 max-w-screen-sm md:max-w-screen-md">
+            <p className="text-2xl sm:text-3xl md:text-4xl font-bold">Get your ticket now!</p>
+            <form onSubmit={handleRegister2} className="flex flex-col">
+              <div className="flex w-full max-w-xs md:max-w-sm">
                 <label htmlFor="btmRegisterEmailId" className="sr-only">enter your email address to join for free</label>
-                <input required={true} className="flex-shrink w-48 py-2 px-4 text-gray-900 flex-1 bg-orange-100 hover:bg-orange-50 focus:bg-orange-50 focus:outline-none" type="email" name="registerEmail" id="btmRegisterEmailId" />
-                <button className="capitalize px-4 py-2 bg-gray-900 hover:bg-gray-800 focus:bg-gray-800 transition-colors duration-150 font-open text-gray-50 focus:outline-none">
+                <input required={true} className="flex-shrink w-48  py-2 px-4 text-gray-900 flex-1 bg-orange-100 hover:bg-orange-50 focus:bg-orange-50 focus:outline-none" type="email" name="registerEmail" id="btmRegisterEmailId" />
+                <button className="capitalize px-4 py-2 bg-gray-900 hover:bg-gray-800 focus:bg-gray-800 transition-colors duration-150 font-sans text-gray-50 focus:outline-none text-lg tracking-wide">
                   Submit
               </button>
               </div>
               <p ref={btmSubConfirmRef} className="ml-12 sm:ml-40 md:ml-56  mt-2 text-white select-none opacity-0">Thanks for subscribing!</p>
             </form>
-            <p className=" sm:pl-24 md:pl-36 mt-8 text-base sm:text-lg font-bold tracking-wide">A question? Don't hesitate to <a className="underline" href="mailto:dev.if.ljc@gmail.com">get in touch.</a></p>
-            <p className=" sm:pl-24 md:pl-36 text-3xl font-bold mt-8">Follow us on:</p>
-            <div className=" sm:pl-24 md:pl-36 mt-12 mb-20 flex space-x-4">
+            <p className="text-2xl sm:text-3xl md:text-4xl font-bold ">And follow us on:</p>
+            <div className="mt-2 flex space-x-4">
               <a href="https://twitter.com/ljc_dev">
                 <div className="sr-only">Twitter</div>
                 <TwitterIco icoClasses={"w-8 h-8"} />
