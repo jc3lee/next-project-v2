@@ -9,7 +9,6 @@ module.exports = {
         orange: colors.orange,
       },
       fontFamily: {
-        "mont": ["Montserrat",],
         "open": ["OpenSans",],
         "play": ["Playfair",],
       },

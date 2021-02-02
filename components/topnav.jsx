@@ -10,7 +10,7 @@ const TopNav = () => {
   const { currentTabIndex, } = useContext(CurrentTabContext)
 
   return (
-    <ul className="fixed z-50 top-0 inset-x-0 h-12 flex space-x-2 sm:space-x-4 md:space-x-8 justify-center items-center bg-gray-900 text-orange-50 font-play tracking-wide">
+    <ul className="fixed z-50 top-0 inset-x-0 h-12 flex space-x-2 sm:space-x-4 md:space-x-8 justify-center items-center bg-gray-900 text-white font-play tracking-wide">
       <li><Link href="#home"><a className={`flex py-2 px-2 hover:text-orange-600 text-2xl ${cn({ "text-orange-600": currentTabIndex === 0 })}`}>
         <div className="md:hidden">
           <HomeIco icoClasses={"w-8 h-8"} />
@@ -32,7 +32,7 @@ const TopNav = () => {
         </div>
         <p className="hidden md:block">Schedule</p>
       </a></Link></li>
-      <li><Link href="#contact"><a className={`flex py-1.5 px-4 border-2  text-orange-50 bg-orange-600 tracking-wider uppercase font-mont font-semibold hover:border-orange-50 focus:border-orange-50 text-base ${cn({ "border-orange-50": currentTabIndex === 3, "border-gray-900": currentTabIndex !== 3 })}`}>Join us!</a></Link></li>
+      <li><Link href="#contact"><a className={`flex py-1.5 px-4 border-2 text-white bg-orange-600 tracking-wider uppercase font-mono font-bold hover:border-orange-50 focus:border-orange-50 text-base ${cn({ "border-orange-50": currentTabIndex === 3, "border-gray-900": currentTabIndex !== 3 })}`}>Join us!</a></Link></li>
     </ul>
   )
 }

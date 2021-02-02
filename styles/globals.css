@@ -4,28 +4,26 @@
 @tailwind utilities;
 
 @layer base {
-  @font-face {
-    font-family: Montserrat;
-    font-weight: 600;
-    src: url("../fonts/Montserrat-SemiBold.ttf") format("truetype");
-  }
 
   @font-face {
     font-family: OpenSans;
     font-weight: 400;
-    src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
+    src: local("Times New Roman"), url("../fonts/OpenSans-Regular.ttf") format("truetype");
+    font-display: swap;
   }
   
   @font-face {
     font-family: Playfair;
     font-weight: 400;
-    src: url("../fonts/PlayfairDisplay-Regular.ttf") format("truetype");
+    src: local("Times New Roman"), url("../fonts/PlayfairDisplay-Regular.ttf") format("truetype");
+    font-display: swap;
   }
   
   @font-face {
     font-family: Playfair;
     font-weight: 700;
-    src: url("../fonts/PlayfairDisplay-Bold.ttf") format("truetype");
+    src: local("Times New Roman"), url("../fonts/PlayfairDisplay-Bold.ttf") format("truetype");
+    font-display: swap;
   }
 }
 

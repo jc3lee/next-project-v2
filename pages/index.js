@@ -1,5 +1,5 @@
 import Layout from '../components/layout'
-import Rellax from "rellax"
+// import Rellax from "rellax"
 import { useContext, useEffect, useRef } from 'react'
 import { useInView, } from 'react-intersection-observer'
 import { CurrentTabContext } from '../hooks/contextHooks'
@@ -19,9 +19,9 @@ export default function Home() {
   const { setCurrentTabIndex, } = useContext(CurrentTabContext)
 
   useEffect(() => {
-    new Rellax(rellaxHeroRef.current, {
-      speed: -10,
-    })
+    // new Rellax(rellaxHeroRef.current, {
+    //   speed: -10,
+    // })
   }, [])
 
   const { ref: homeRef, inView: homeInView, } = useInView({
@@ -78,12 +78,13 @@ export default function Home() {
               </div>
               <form onSubmit={handleRegister} className="md:pl-8 flex flex-col mt-8 mb-28">
                 <div className="flex max-w-xs">
-                  <input required={true} className="flex-shrink w-48 py-2 px-4 text-gray-900 flex-1 bg-orange-50 hover:bg-white focus:bg-white focus:outline-none" type="email" name="registerEmail" id="registerEmailId" />
+                  <label htmlFor="topRegisterEmailId" className="sr-only">enter your email address to join for free</label>
+                  <input required={true} className="flex-shrink w-48 py-2 px-4 text-gray-900 flex-1 bg-orange-50 hover:bg-white focus:bg-white focus:outline-none" type="email" name="registerEmail" id="topRegisterEmailId" />
                   <button className="flex-shrink-0 px-4 py-2 bg-orange-600 transition-colors duration-150 font-open text-gray-50 focus:outline-none">
                     Register
               </button>
                 </div>
-                <p ref={topSubConfirmRef} className="ml-12 sm:ml-40 md:ml-56 mt-4 text-orange-50 select-none opacity-0">Thanks for subscribing!</p>
+                <p ref={topSubConfirmRef} className="ml-12 sm:ml-40 md:ml-56 mt-4 text-white select-none opacity-0">Thanks for subscribing!</p>
               </form>
             </div>
           </div>
@@ -99,7 +100,7 @@ export default function Home() {
           </div>
         </div>
         <div ref={scheduleRef} id="schedule" className="w-full bg-gray-900 ">
-          <h1 className="mt-16 pl-8 pr-2 sm:pl-24 md:pl-36 md:mt-24 tracking-wide capitalize text-3xl sm:text-4xl md:text-5xl text-orange-50">
+          <h1 className="mt-16 pl-8 pr-2 sm:pl-24 md:pl-36 md:mt-24 tracking-wide capitalize text-3xl sm:text-4xl md:text-5xl text-white">
             Schedule
           </h1>
           <div className="mt-12 md:mt-24 max-w-screen-md mx-auto flex flex-col items-center">
@@ -111,22 +112,23 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div ref={contactRef} id="contact" className=" w-full bg-orange-600 text-orange-50">
-          <h1 className="mt-16 pl-8 pr-2 sm:pl-24 md:pl-36 md:mt-24 pb-8 md:pb-16 tracking-wide capitalize text-3xl sm:text-4xl md:text-5xl text-orange-50 border-b border-orange-200">
+        <div ref={contactRef} id="contact" className=" w-full bg-orange-600 text-black">
+          <h1 className="mt-16 pl-8 pr-2 sm:pl-24 md:pl-36 md:mt-24 pb-8 md:pb-16 tracking-wide capitalize text-3xl sm:text-4xl md:text-5xl text-white border-b border-orange-200">
             Cybersecurity <br /> Conference 2021
           </h1>
           <div className="pl-2 pr-2 m-16 max-w-xs mx-auto sm:max-w-none md:mx-0 md:max-w-screen-lg">
             <p className=" sm:pl-24 md:pl-36 mt-8 text-lg sm:text-xl md:text-2xl font-bold">Get your ticket now!</p>
             <form onSubmit={handleRegister2} className=" sm:pl-24 md:pl-36 flex flex-col mt-6">
               <div className="flex w-full max-w-xs">
-                <input required={true} className="flex-shrink w-48 py-2 px-4 text-gray-900 flex-1 bg-orange-100 hover:bg-orange-50 focus:bg-orange-50 focus:outline-none" type="email" name="registerEmail" id="registerEmailId" />
+                <label htmlFor="btmRegisterEmailId" className="sr-only">enter your email address to join for free</label>
+                <input required={true} className="flex-shrink w-48 py-2 px-4 text-gray-900 flex-1 bg-orange-100 hover:bg-orange-50 focus:bg-orange-50 focus:outline-none" type="email" name="registerEmail" id="btmRegisterEmailId" />
                 <button className="capitalize px-4 py-2 bg-gray-900 hover:bg-gray-800 focus:bg-gray-800 transition-colors duration-150 font-open text-gray-50 focus:outline-none">
                   Submit
               </button>
               </div>
-              <p ref={btmSubConfirmRef} className="ml-12 sm:ml-40 md:ml-56  mt-2 text-orange-50 select-none opacity-0">Thanks for subscribing!</p>
+              <p ref={btmSubConfirmRef} className="ml-12 sm:ml-40 md:ml-56  mt-2 text-white select-none opacity-0">Thanks for subscribing!</p>
             </form>
-            <p className=" sm:pl-24 md:pl-36 mt-8 text-base tracking-wide">A question? Don't hesitate to <a className="underline" href="mailto:dev.if.ljc@gmail.com">get in touch.</a></p>
+            <p className=" sm:pl-24 md:pl-36 mt-8 text-base sm:text-lg font-bold tracking-wide">A question? Don't hesitate to <a className="underline" href="mailto:dev.if.ljc@gmail.com">get in touch.</a></p>
             <p className=" sm:pl-24 md:pl-36 text-3xl font-bold mt-8">Follow us on:</p>
             <div className=" sm:pl-24 md:pl-36 mt-12 mb-20 flex space-x-4">
               <a href="https://twitter.com/ljc_dev">
