@@ -5,8 +5,7 @@ import TwitterIco from "../icons/TwitterIco"
 const Speaker = ({ speakerData, index }) => {
   const { name, title, main, imgSrc } = speakerData
   return (
-    <div className={`justify-around bg-gray-50 md:bg-none w-72 sm:pt-8 md:pt-0 sm:w-96 md:w-full max-w-screen-md mx-auto items-center md:items-stretch flex flex-col md:${cn({ "flex-row-reverse": index % 2 !== 0, "flex-row": index % 2 === 0 })}`}>
-      <div className="hidden flex-row md:flex-row-reverse"></div>
+    <div className={`justify-around bg-gray-50 md:bg-none w-72 sm:pt-8 md:pt-0 sm:w-96 md:w-full max-w-screen-md mx-auto items-center md:items-stretch flex flex-col ${cn({ "md:flex-row-reverse": index % 2 !== 0, "md:flex-row": index % 2 === 0 })}`}>
       <div className="w-72 h-96">
         <img src={imgSrc} className="w-full h-full object-cover" />
       </div>
