@@ -1,0 +1,54 @@
+{
+  "schedule": [
+    {
+      "timeStart": "1:30pm",
+      "timeEnd": "2:00pm",
+      "text": "Introduction Keynote"
+    },
+    {
+      "timeStart": "2:00pm",
+      "timeEnd": "3:00pm",
+      "text": "What is Cybersecurity?"
+    },
+    {
+      "timeStart": "3:00pm",
+      "timeEnd": "3:30pm",
+      "text": "Changing Lanes with Lyft"
+    },
+    {
+      "timeStart": "3:30pm",
+      "timeEnd": "5:00pm",
+      "text": "Offensive Computer Security"
+    },
+    {
+      "timeStart": "5:15pm",
+      "timeEnd": "5:45pm",
+      "text": "Everything is a CMS"
+    },
+    {
+      "timeStart": "5:45pm",
+      "timeEnd": "6:15pm",
+      "text": "Why Real Time Matters"
+    },
+    {
+      "timeStart": "6:15pm",
+      "timeEnd": "7:30pm",
+      "text": "Security 101"
+    },
+    {
+      "timeStart": "7:30pm",
+      "timeEnd": "8:00pm",
+      "text": "Magic Authentication"
+    },
+    {
+      "timeStart": "8:00pm",
+      "timeEnd": "9:00pm",
+      "text": "Software Security"
+    },
+    {
+      "timeStart": "9:00pm",
+      "timeEnd": "9:30pm",
+      "text": "WebAssembly Zone"
+    }
+  ]
+}

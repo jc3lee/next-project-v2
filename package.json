@@ -10,11 +10,13 @@
   "dependencies": {
     "aos": "^2.3.4",
     "autoprefixer": "^10.2.4",
+    "classnames": "^2.2.6",
     "next": "10.0.6",
     "postcss": "^8.2.4",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-icons": "^4.1.0",
+    "react-intersection-observer": "^8.31.0",
     "react-player": "^2.8.2",
     "react-slick": "^0.28.0",
     "rellax": "^1.12.1",

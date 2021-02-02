@@ -21,6 +21,7 @@ module.exports = {
         "merri": ["Merriweather",],
         "mont": ["Montserrat",],
         "open": ["OpenSans",],
+        "play": ["Playfair",],
         "rale": ["Raleway",],
         "bot": ["Roboto",],
       },
