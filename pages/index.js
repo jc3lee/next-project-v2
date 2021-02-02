@@ -14,9 +14,17 @@ const speakersData = require("../data/speakersData.json")
 const scheduleData = require("../data/scheduleData.json")
 
 export default function Home() {
+  const rellaxHeroRef = useRef(null)
   const topSubConfirmRef = useRef(null)
   const btmSubConfirmRef = useRef(null)
   const { setCurrentTabIndex, } = useContext(CurrentTabContext)
+
+  useEffect(() => {
+    new Rellax(rellaxHeroRef.current, {
+      speed: -10,
+    })
+  }, [])
+
   const { ref: homeRef, inView: homeInView, } = useInView({
     threshold: 0.5,
   })
@@ -59,7 +67,7 @@ export default function Home() {
     <Layout>
       <div className="w-full grid grid-cols-1 font-play">
         <div ref={homeRef} id="home" className="relative w-full text-gray-50">
-          <div className="absolute inset-0 w-full h-full bg-cover bg-no-repeat bg-center" style={{ backgroundImage: "url(/images/bg-hero.jpg)", filter: "brightness(75%) contrast(125%)" }}></div>
+          <div ref={rellaxHeroRef} className="absolute inset-0 w-full h-full bg-cover bg-no-repeat bg-center" style={{ zIndex: -100, backgroundImage: "url(/images/bg-hero.jpg)", filter: "brightness(75%) contrast(125%)" }}></div>
           <div className="pl-8 pr-2 sm:pl-24 md:pl-36 mt-64 w-full sm:mt-72 max-w-xs mx-auto sm:max-w-none md:mx-0 md:mt-96 pt-0 sm:pt-16 md:pt-24 relative z-10">
             <h1 className=" tracking-wide leading-tight capitalize text-4xl sm:text-6xl md:text-7xl">
               cybersecurity <br /> conference 2021
@@ -69,7 +77,7 @@ export default function Home() {
                 <div className="w-16 md:w-28 h-0.5 bg-white"></div>
                 <p className="text-base sm:text-lg md:text-xl tracking-wide ml-4">Live event, February 14th</p>
               </div>
-              <form onSubmit={handleRegister} className="md:pl-8 flex flex-col mt-8 mb-20">
+              <form onSubmit={handleRegister} className="md:pl-8 flex flex-col mt-8 mb-28">
                 <div className="flex max-w-xs">
                   <input required={true} className="flex-shrink w-48 py-2 px-4 text-gray-900 flex-1 bg-orange-50 hover:bg-white focus:bg-white focus:outline-none" type="email" name="registerEmail" id="registerEmailId" />
                   <button className="flex-shrink-0 px-4 py-2 bg-orange-600 transition-colors duration-150 font-open text-gray-50 focus:outline-none">
