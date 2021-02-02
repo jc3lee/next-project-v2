@@ -68,7 +68,7 @@ export default function Home() {
       <div className="w-full grid grid-cols-1 font-play">
         <div ref={homeRef} id="home" className="relative w-full text-gray-50">
           <div ref={rellaxHeroRef} className="absolute inset-0 w-full h-full bg-cover bg-no-repeat bg-center" style={{ zIndex: -100, backgroundImage: "url(/images/bg-hero.jpg)", filter: "brightness(75%) contrast(125%)" }}></div>
-          <div className="pl-8 pr-2 sm:pl-24 md:pl-36 mt-64 w-full sm:mt-72 max-w-xs mx-auto sm:max-w-none md:mx-0 md:mt-96 pt-0 sm:pt-16 md:pt-24 relative z-10">
+          <div className="pl-2 pr-2 sm:pl-24 md:pl-36 mt-64 w-full sm:mt-72 max-w-xs mx-auto sm:max-w-none md:mx-0 md:mt-96 pt-0 sm:pt-16 md:pt-24 relative z-10">
             <h1 className=" tracking-wide leading-tight capitalize text-4xl sm:text-6xl md:text-7xl">
               cybersecurity <br /> conference 2021
             </h1>
